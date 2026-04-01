@@ -64,7 +64,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative flex min-h-screen items-center overflow-hidden bg-[#080808] px-6 py-24 text-brand-text"
+      className="relative flex min-h-screen items-center overflow-hidden bg-brand-bg px-6 py-24 text-brand-text"
     >
       <div
         ref={gradientRef}
@@ -84,31 +84,43 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[900px]">
-        <h1 className="max-w-[16ch] text-[clamp(3rem,7.2vw,5rem)] font-extrabold leading-[0.98] tracking-[-0.02em]">
-          {headline.split(" ").map((word, index) => (
-            <span key={`${word}-${index}`} className="hero-word mr-[0.32em] inline-block opacity-0">
-              {word}
-            </span>
-          ))}
-        </h1>
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
+        <div className="flex flex-col items-start text-left">
+          <h1 className="max-w-[15ch] text-[clamp(2.8rem,6.5vw,4.5rem)] font-extrabold leading-[0.98] tracking-[-0.02em]">
+            {headline.split(" ").map((word, index) => (
+              <span key={`${word}-${index}`} className="hero-word mr-[0.32em] inline-block opacity-0">
+                {word}
+              </span>
+            ))}
+          </h1>
 
-        <p className="hero-subheadline mt-8 max-w-[70ch] text-base leading-relaxed text-brand-text/78 opacity-0 sm:text-lg">
-          Real transformation needs an architected agentic ecosystem - not isolated use cases.
-          Nextdot builds AI operating systems for enterprises that are no longer experimenting.
-        </p>
+          <p className="hero-subheadline mt-8 max-w-[60ch] text-base leading-relaxed text-brand-text/90 opacity-0 sm:text-lg">
+            Real transformation needs an architected agentic ecosystem - not isolated use cases.
+            Nextdot builds AI operating systems for enterprises that are no longer experimenting.
+          </p>
 
-        <div className="mt-10 flex flex-wrap gap-4">
-          <button className="hero-cta rounded-full bg-brand-accent px-7 py-3 text-sm font-bold uppercase tracking-[0.08em] text-black opacity-0 transition-transform duration-300 hover:-translate-y-1">
-            See What We Build →
-          </button>
-          <button className="hero-cta rounded-full border border-brand-text/35 bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-text opacity-0 transition-colors duration-300 hover:border-brand-accent hover:text-brand-accent">
-            Talk to Us →
-          </button>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <button className="hero-cta rounded-full bg-brand-accent px-7 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white opacity-0 transition-transform duration-300 hover:-translate-y-1">
+              See What We Build →
+            </button>
+            <button className="hero-cta rounded-full border border-black/20 bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-text opacity-0 transition-colors duration-300 hover:border-brand-accent hover:text-brand-accent">
+              Talk to Us →
+            </button>
+          </div>
+        </div>
+
+        {/* Hero Visual */}
+        <div className="hero-cta opacity-0 relative flex w-full aspect-[4/3] sm:aspect-video lg:aspect-[4/3] items-center justify-center overflow-hidden rounded-[2rem] border border-black/10 bg-[#FAFAFA] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.06)] p-8 sm:p-12 lg:p-16">
+          <img
+            src="/Nextdot_HB.png"
+            alt="Nextdot Hero Image"
+            className="h-full w-full object-contain select-none drop-shadow-sm"
+          />
+          <div className="absolute inset-0 rounded-[2rem] border border-black/10 pointer-events-none" />
         </div>
       </div>
 
-      <div className="hero-credibility absolute inset-x-6 bottom-8 mx-auto w-full max-w-[900px] border-t border-white/10 pt-4 text-xs text-brand-text/55 opacity-0 sm:text-sm">
+      <div className="hero-credibility absolute inset-x-6 bottom-8 mx-auto w-full max-w-7xl border-t border-black/15 pt-4 text-xs text-brand-text/85 opacity-0 sm:text-sm">
         <p className="whitespace-normal md:whitespace-nowrap">
           {credibilityItems.map((item, index) => (
             <span key={item}>

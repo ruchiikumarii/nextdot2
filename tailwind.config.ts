@@ -11,7 +11,8 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          bg: "#080808",
+          bg: "#FFFFFF",
+          text: "#111111",
           accent: "#3B82F6",
         },
       },

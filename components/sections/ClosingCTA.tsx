@@ -73,22 +73,22 @@ export default function ClosingCTA() {
   );
 
   return (
-    <section ref={sectionRef} id="closing-cta" className="relative bg-[#080808] text-brand-text">
+    <section ref={sectionRef} id="closing-cta" className="relative bg-brand-bg text-brand-text">
       <div className="relative overflow-hidden px-6 py-28 sm:py-36">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <span className="select-none text-[clamp(4rem,18vw,16rem)] font-black tracking-[0.08em] text-white/[0.03]">
+          <span className="select-none text-[clamp(4rem,18vw,16rem)] font-black tracking-[0.08em] text-black/[0.12]">
             NEXTDOT
           </span>
         </div>
 
         <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center text-center">
-          <p className="font-mono text-xs tracking-[0.14em] text-brand-text/45">{"// Ready to Build"}</p>
+          <p className="font-mono text-xs tracking-[0.14em] text-brand-text/90">{"// Ready to Build"}</p>
 
           <h2 className="closing-headline mt-5 text-[clamp(3.1rem,7.5vw,5rem)] font-extrabold leading-[0.94] tracking-[-0.03em] opacity-0">
             Done experimenting with AI?
           </h2>
 
-          <p className="closing-subheadline mt-6 max-w-2xl text-base leading-relaxed text-brand-text/75 opacity-0 sm:text-lg">
+          <p className="closing-subheadline mt-6 max-w-2xl text-base leading-relaxed text-brand-text/85 opacity-0 sm:text-lg">
             Let&apos;s define what production looks like for your organisation.
           </p>
 
@@ -103,21 +103,21 @@ export default function ClosingCTA() {
         </div>
       </div>
 
-      <footer className="border-t border-white/10 px-6 py-7">
+      <footer className="border-t border-black/15 px-6 py-7">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-base font-semibold tracking-[0.01em] text-brand-text">Nextdot</p>
 
           <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2">
             {footerLinks.map((link) => (
-              <a key={link} href="#" className="text-sm text-brand-text/65 transition-colors hover:text-brand-text">
+              <a key={link} href="#" className="text-sm text-brand-text/90 transition-colors hover:text-brand-text">
                 {link}
               </a>
             ))}
           </nav>
         </div>
 
-        <div className="mx-auto mt-5 w-full max-w-6xl border-t border-white/10 pt-5">
-          <p className="text-xs tracking-[0.08em] text-brand-text/45">© 2025 Nextdot. Built in India.</p>
+        <div className="mx-auto mt-5 w-full max-w-6xl border-t border-black/15 pt-5">
+          <p className="text-xs tracking-[0.08em] text-brand-text/90">© 2025 Nextdot. Built in India.</p>
         </div>
       </footer>
     </section>

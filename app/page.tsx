@@ -7,21 +7,29 @@ import Credibility from "@/components/sections/Credibility";
 import CapabilityCenter from "@/components/sections/CapabilityCenter";
 import Creative from "@/components/sections/Creative";
 import ClosingCTA from "@/components/sections/ClosingCTA";
-import ParticleTextOverlay from "@/components/ParticleHeadingOverlay";
+import fs from "fs";
+import path from "path";
 
 export default function Home() {
+  const clientsDir = path.join(process.cwd(), "public/clients");
+  let clientLogos: string[] = [];
+  try {
+    clientLogos = fs.readdirSync(clientsDir).filter(f => f.match(/\.(png|jpe?g|svg|webp|avif)$/i));
+  } catch (err) {
+    console.error("Failed to read clients directory:", err);
+  }
+
   return (
     <main className="bg-brand-bg text-brand-text relative">
-      <ParticleTextOverlay />
       <Hero />
       <Problem />
       <WhatWeBuild />
       <FlagshipProduct />
       <HowWeWork />
-      <Credibility />
+      <Credibility clientLogos={clientLogos} />
       <CapabilityCenter />
       <Creative />
       <ClosingCTA />
-    </main>
+    </main >
   );
 }

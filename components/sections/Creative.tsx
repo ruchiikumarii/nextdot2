@@ -78,14 +78,14 @@ export default function Creative() {
     <section
       ref={sectionRef}
       id="creative"
-      className="min-h-screen bg-[#080808] px-6 py-20 text-brand-text"
+      className="min-h-screen bg-brand-bg px-6 py-20 text-brand-text"
     >
       <div className="mx-auto grid w-full max-w-6xl items-start gap-12 lg:grid-cols-[1fr_1.1fr]">
         <div className="creative-copy max-w-xl opacity-0">
           <h2 className="text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl">
             Nextdot for Creative
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-brand-text/72 sm:text-lg">
+          <p className="mt-6 text-base leading-relaxed text-brand-text/85 sm:text-lg">
             A decade of digital and creative consulting, now re-engineered with AI at the core.
           </p>
         </div>
@@ -94,10 +94,10 @@ export default function Creative() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="creative-card rounded-2xl border border-white/10 bg-[#111111] p-6 opacity-0 transition-colors duration-250 hover:border-brand-accent"
+              className="creative-card rounded-2xl border border-black/15 bg-[#F8F8F8] p-6 opacity-0 transition-colors duration-250 hover:border-brand-accent"
             >
               <h3 className="text-lg font-bold leading-tight text-brand-text">{service.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-text/68">{service.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-brand-text/90">{service.description}</p>
             </article>
           ))}
         </div>

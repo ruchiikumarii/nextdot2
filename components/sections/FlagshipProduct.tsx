@@ -63,7 +63,7 @@ export default function FlagshipProduct() {
     <section
       ref={sectionRef}
       id="flagship-product"
-      className="relative min-h-screen overflow-hidden bg-[#0D0D0D] px-6 py-20 text-brand-text"
+      className="relative min-h-screen overflow-hidden bg-brand-bg px-6 py-20 text-brand-text"
     >
       <div className="pointer-events-none absolute inset-0 opacity-65">
         <div className="absolute left-[-8%] top-[-8%] h-72 w-72 rounded-full bg-brand-accent/10 blur-3xl" />
@@ -82,12 +82,12 @@ export default function FlagshipProduct() {
             </h2>
           </div>
 
-          <p className="mt-6 max-w-[65ch] text-base leading-relaxed text-brand-text/80 sm:text-lg">
+          <p className="mt-6 max-w-[65ch] text-base leading-relaxed text-brand-text/90 sm:text-lg">
             A Small Language Model built exclusively for healthcare compliance - trained to
             understand the rules, so your teams don&apos;t have to enforce them manually.
           </p>
 
-          <p className="mt-5 max-w-[72ch] text-sm leading-relaxed text-brand-text/68 sm:text-base">
+          <p className="mt-5 max-w-[72ch] text-sm leading-relaxed text-brand-text/90 sm:text-base">
             Healthcare communication is high-volume and high-risk. One incorrect claim, a missing
             disclaimer, an unsupported benefit, or an off-label reference can delay campaigns or
             trigger regulatory action. NextComply AI brings compliance into the workflow itself. It
@@ -100,7 +100,7 @@ export default function FlagshipProduct() {
             {capabilities.map((item) => (
               <li
                 key={item}
-                className="capability-item flex items-start gap-3 text-sm text-brand-text/78 opacity-0 sm:text-base"
+                className="capability-item flex items-start gap-3 text-sm text-brand-text/90 opacity-0 sm:text-base"
               >
                 <span className="mt-[0.42rem] inline-block h-1.5 w-1.5 flex-none rounded-full bg-brand-accent" />
                 <span>{item}</span>
@@ -119,9 +119,9 @@ export default function FlagshipProduct() {
         </div>
 
         <div className="relative">
-          <div className="relative rounded-3xl border border-white/10 bg-[#111111] p-6 shadow-[0_28px_80px_rgba(0,0,0,0.45)]">
-            <div className="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-text/55">
+          <div className="relative rounded-3xl border border-black/15 bg-[#F8F8F8] p-6 shadow-[0_28px_80px_rgba(0,0,0,0.1)]">
+            <div className="mb-5 flex items-center justify-between border-b border-black/15 pb-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-text/85">
                 Compliance Monitor
               </p>
               <span className="rounded-full bg-brand-accent/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-brand-accent">
@@ -132,19 +132,19 @@ export default function FlagshipProduct() {
             <div className="space-y-3">
               <div className="rounded-xl border border-red-400/30 bg-red-500/8 p-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.1em] text-red-300">Flagged Claim</p>
-                <p className="mt-1 text-xs text-brand-text/70">Unsupported therapeutic benefit in line 4.</p>
+                <p className="mt-1 text-xs text-brand-text/85">Unsupported therapeutic benefit in line 4.</p>
               </div>
               <div className="rounded-xl border border-blue-300/30 bg-blue-400/8 p-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.1em] text-blue-200">Warning</p>
-                <p className="mt-1 text-xs text-brand-text/70">Required disclaimer missing for market: US.</p>
+                <p className="mt-1 text-xs text-brand-text/85">Required disclaimer missing for market: US.</p>
               </div>
               <div className="rounded-xl border border-brand-accent/30 bg-brand-accent/8 p-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.1em] text-brand-accent">Suggested Fix</p>
-                <p className="mt-1 text-xs text-brand-text/70">Add approved safety statement and rebalance benefit claim language.</p>
+                <p className="mt-1 text-xs text-brand-text/85">Add approved safety statement and rebalance benefit claim language.</p>
               </div>
             </div>
 
-            <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-white/10">
+            <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-black/10">
               <div className="h-full w-3/4 rounded-full bg-brand-accent" />
             </div>
           </div>

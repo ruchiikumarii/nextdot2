@@ -44,7 +44,7 @@ export default function Navbar() {
         const navbar = navbarRef.current;
         if (!navbar) return;
 
-        let ctx = gsap.context(() => {
+        const ctx = gsap.context(() => {
             // 1. Navbar slide up/down animation on scroll
             const showAnim = gsap.from(navbar, {
                 yPercent: -100,
@@ -67,16 +67,16 @@ export default function Navbar() {
                     // Toggle background color and bottom border based on scroll position
                     if (self.scroll() > 50) {
                         gsap.to(navbar, {
-                            backgroundColor: "#080808",
-                            borderBottomColor: "rgba(255, 255, 255, 0.1)",
+                            backgroundColor: "#FFFFFF",
+                            borderBottomColor: "rgba(0, 0, 0, 0.1)",
                             duration: 0.4,
                             ease: "power2.out",
                             overwrite: "auto",
                         });
                     } else {
                         gsap.to(navbar, {
-                            backgroundColor: "rgba(8, 8, 8, 0)",
-                            borderBottomColor: "rgba(255, 255, 255, 0)",
+                            backgroundColor: "rgba(255, 255, 255, 0)",
+                            borderBottomColor: "rgba(0, 0, 0, 0)",
                             duration: 0.4,
                             ease: "power2.out",
                             overwrite: "auto",
@@ -99,7 +99,7 @@ export default function Navbar() {
             <header
                 ref={navbarRef}
                 className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-5 border-b border-transparent"
-                style={{ backgroundColor: "rgba(8, 8, 8, 0)" }}
+                style={{ backgroundColor: "rgba(255, 255, 255, 0)" }}
             >
                 {/* Logo */}
                 <Link href="/" className="text-xl font-bold tracking-tight text-brand-text transition-all duration-300 w-24">
@@ -112,14 +112,14 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-brand-text/80 hover:text-brand-text transition-colors"
+                            className="text-sm font-medium text-brand-text/90 hover:text-brand-text transition-colors"
                         >
                             {link.name}
                         </Link>
                     ))}
                     <Link
                         href="/#closing-cta"
-                        className="bg-brand-accent text-[#080808] px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+                        className="bg-brand-accent text-white px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
                     >
                         Let&apos;s Talk
                     </Link>
@@ -163,7 +163,7 @@ export default function Navbar() {
                 ))}
                 <Link
                     href="/#closing-cta"
-                    className="bg-brand-accent text-[#080808] px-8 py-3 mt-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
+                    className="bg-brand-accent text-white px-8 py-3 mt-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
                     onClick={() => setIsMobileMenuOpen(false)}
                 >
                     Let&apos;s Talk

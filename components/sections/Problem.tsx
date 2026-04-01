@@ -72,17 +72,17 @@ export default function Problem() {
     <section
       ref={sectionRef}
       id="problem"
-      className="relative min-h-screen bg-[#080808] px-6 py-20 text-brand-text"
+      className="relative min-h-screen bg-brand-bg px-6 py-20 text-brand-text"
     >
       <div className="mx-auto grid w-full max-w-6xl items-start gap-12 lg:grid-cols-[1.05fr_1fr]">
         <div className="problem-copy max-w-2xl opacity-0">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.14em] text-brand-text/50">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.14em] text-brand-text/85">
             Problem
           </p>
           <h2 className="text-4xl font-extrabold leading-tight tracking-[-0.02em] text-brand-text sm:text-5xl">
             Most enterprises are stuck at the pilot.
           </h2>
-          <p className="mt-7 max-w-[58ch] text-base leading-relaxed text-brand-text/75 sm:text-lg">
+          <p className="mt-7 max-w-[58ch] text-base leading-relaxed text-brand-text/85 sm:text-lg">
             Moving AI into production is not a model problem - it&apos;s a systems problem. It
             requires domain context, workflow integration, and engineering accountability.
           </p>
@@ -92,13 +92,13 @@ export default function Problem() {
           {problemCards.map((card) => (
             <article
               key={card.number}
-              className="problem-card rounded-2xl border border-white/10 bg-[#111111] p-6 opacity-0"
+              className="problem-card rounded-2xl border border-black/15 bg-[#F8F8F8] p-6 opacity-0"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-text/42">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-text/60">
                 {card.number}
               </p>
               <h3 className="mt-3 text-xl font-bold leading-tight text-brand-text">{card.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-text/72 sm:text-[0.95rem]">
+              <p className="mt-3 text-sm leading-relaxed text-brand-text/85 sm:text-[0.95rem]">
                 {card.body}
               </p>
             </article>

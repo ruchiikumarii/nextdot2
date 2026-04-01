@@ -62,40 +62,56 @@ export default function CapabilityCenter() {
   return (
     <section
       ref={sectionRef}
-      id="capability-center"
-      className="relative flex min-h-screen items-center bg-[#080808] px-6 py-20 text-brand-text"
+      id="capability"
+      className="relative flex min-h-screen items-center bg-brand-bg px-6 py-20 text-brand-text"
     >
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        className="pointer-events-none absolute inset-0 opacity-[0.12]"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(240,238,232,0.8) 0.5px, transparent 0.5px), linear-gradient(rgba(240,238,232,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(240,238,232,0.12) 1px, transparent 1px)",
+            "radial-gradient(circle, rgba(17,17,17,0.8) 0.5px, transparent 0.5px), linear-gradient(rgba(17,17,17,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,17,0.12) 1px, transparent 1px)",
           backgroundSize: "24px 24px, 120px 120px, 120px 120px",
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-6xl text-center">
-        <h2 className="mx-auto max-w-[12ch] text-[clamp(3.4rem,8.5vw,6rem)] font-extrabold leading-[0.92] tracking-[-0.035em]">
-          {headlineLines.map((line) => (
-            <span key={line} className="mb-[0.08em] block">
-              {line.split(" ").map((word, index) => (
-                <span key={`${word}-${index}`} className="mr-[0.28em] inline-block overflow-hidden">
-                  <span className="cc-word inline-block">{word}</span>
-                </span>
-              ))}
-            </span>
-          ))}
-        </h2>
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="text-left">
+          <h2 className="max-w-[12ch] text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-[0.92] tracking-[-0.035em]">
+            {headlineLines.map((line) => (
+              <span key={line} className="mb-[0.08em] block">
+                {line.split(" ").map((word, index) => (
+                  <span key={`${word}-${index}`} className="mr-[0.28em] inline-block overflow-hidden">
+                    <span className="cc-word inline-block">{word}</span>
+                  </span>
+                ))}
+              </span>
+            ))}
+          </h2>
 
-        <div className="cc-copy mx-auto mt-10 grid max-w-[680px] gap-5 text-balance">
-          {bodyParagraphs.map((paragraph) => (
-            <p
-              key={paragraph}
-              className="cc-paragraph text-sm leading-relaxed text-brand-text/76 opacity-0 sm:text-base sm:leading-8"
-            >
-              {paragraph}
-            </p>
-          ))}
+          <div className="cc-copy mt-8 grid max-w-[600px] gap-5 text-balance">
+            {bodyParagraphs.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="cc-paragraph text-sm leading-relaxed text-brand-text/85 opacity-0 sm:text-base sm:leading-8"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        {/* Dashboard Placeholder Image */}
+        <div className="cc-image relative w-full overflow-hidden rounded-3xl border border-black/15 bg-white shadow-xl cc-paragraph opacity-0">
+          <div className="absolute inset-x-0 top-0 flex h-10 items-center justify-start gap-2 border-b border-black/15 bg-[#F8F8F8] px-4">
+            <div className="h-3 w-3 rounded-full bg-black/10" />
+            <div className="h-3 w-3 rounded-full bg-black/10" />
+            <div className="h-3 w-3 rounded-full bg-black/10" />
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+            alt="AI Capability Center Dashboard"
+            className="h-full w-full object-cover pt-10"
+          />
         </div>
       </div>
     </section>

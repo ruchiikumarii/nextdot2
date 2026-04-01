@@ -77,7 +77,7 @@ export default function WhatWeBuild() {
     <section
       ref={sectionRef}
       id="what-we-build"
-      className="relative min-h-screen overflow-hidden bg-[#080808] px-6 py-20 text-brand-text"
+      className="relative min-h-screen overflow-hidden bg-brand-bg px-6 py-20 text-brand-text"
     >
       <div className="pointer-events-none absolute inset-0 opacity-40">
         <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-brand-accent/10 blur-3xl" />
@@ -85,11 +85,11 @@ export default function WhatWeBuild() {
       </div>
 
       <div className="relative mx-auto w-full max-w-6xl">
-        <p className="font-mono text-xs tracking-[0.14em] text-brand-text/45">{"// What We Build"}</p>
+        <p className="font-mono text-xs tracking-[0.14em] text-brand-text/90">{"// What We Build"}</p>
         <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl">
           AI Engineering & Agentic Systems
         </h2>
-        <p className="mt-5 max-w-2xl text-base text-brand-text/72 sm:text-lg">
+        <p className="mt-5 max-w-2xl text-base text-brand-text/85 sm:text-lg">
           Production-grade systems. Built to run inside real enterprises.
         </p>
 
@@ -97,13 +97,13 @@ export default function WhatWeBuild() {
           {services.map((service) => (
             <article
               key={service.title}
-              className={`service-card rounded-2xl border bg-[#111111]/95 p-6 opacity-0 transition-transform duration-300 hover:-translate-y-1 ${service.flagship
+              className={`service-card rounded-2xl border bg-[#F8F8F8] p-6 opacity-0 transition-transform duration-300 hover:-translate-y-1 ${service.flagship
                 ? "border-brand-accent/70 shadow-[0_0_0_1px_rgba(59,130,246,0.12)]"
-                : "border-white/10"
+                : "border-black/15"
                 }`}
             >
               <h3 className="text-lg font-bold leading-tight text-brand-text">{service.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-text/68">{service.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-brand-text/90">{service.description}</p>
 
               {service.flagship ? (
                 <a

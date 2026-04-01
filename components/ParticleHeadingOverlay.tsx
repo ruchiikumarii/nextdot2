@@ -28,7 +28,7 @@ export default function ParticleBackground() {
         let particles: Particle[] = [];
 
         // Mouse tracking
-        let mouse = {
+        const mouse = {
             x: -1000,
             y: -1000,
             radius: 150, // Interaction radius
@@ -112,7 +112,7 @@ export default function ParticleBackground() {
                 // Draw particle
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                ctx.fillStyle = "rgba(240, 238, 232, 0.6)"; // Text color with opacity
+                ctx.fillStyle = "rgba(17, 17, 17, 0.4)"; // Dark particles for light mode
                 ctx.fill();
 
                 // Connect particles within a certain distance
@@ -124,7 +124,7 @@ export default function ParticleBackground() {
 
                     if (distance2 < 80) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(240, 238, 232, ${0.2 * (1 - distance2 / 80)})`;
+                        ctx.strokeStyle = `rgba(17, 17, 17, ${0.15 * (1 - distance2 / 80)})`;
                         ctx.lineWidth = 0.5;
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(p2.x, p2.y);
@@ -170,7 +170,7 @@ export default function ParticleBackground() {
         <canvas
             ref={canvasRef}
             className="fixed inset-0 z-10 pointer-events-none"
-            style={{ mixBlendMode: "screen" }}
+            style={{ mixBlendMode: "multiply" }}
         />
     );
 }
